@@ -42,12 +42,12 @@ public class CRUDTests extends BaseTest {
                 .body("job", equalTo("Zion Resident"));
     }
 
-//    @Test
-//    public void deleteUser() {
-//        given()
-//        .when()
-//                .delete("/users/2")
-//        .then()
-//                .statusCode(204);
-//    }
+    @Test
+    public void deleteUser() {
+        given()
+        .when()
+                .delete("/users/2")
+        .then()
+                .statusCode(204);
+    }
 }

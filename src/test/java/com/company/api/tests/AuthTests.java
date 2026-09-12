@@ -26,16 +26,16 @@ public class AuthTests extends BaseTest {
         System.out.println("Token: " + response.getToken());
     }
 
-//    @Test(retryAnalyzer = com.company.api.listeners.RetryAnalyzer.class)
-//    public void unsuccessfulLogin() {
-//        LoginRequest loginRequest = new LoginRequest("peter@klaven", "");
-//
-//        given()
-//                .body(loginRequest)
-//        .when()
-//                .post("/login")
-//        .then()
-//                .statusCode(400)
-//                .body("error", equalTo("Missing password"));
-//    }
+    @Test(retryAnalyzer = com.company.api.listeners.RetryAnalyzer.class)
+    public void unsuccessfulLogin() {
+        LoginRequest loginRequest = new LoginRequest("peter@klaven", "");
+
+        given()
+                .body(loginRequest)
+        .when()
+                .post("/login")
+        .then()
+                .statusCode(400)
+                .body("error", equalTo("Missing password"));
+    }
 }
