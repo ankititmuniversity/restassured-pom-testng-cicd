@@ -1,0 +1,6 @@
+/.allure/
+/.settings/
+/allure-results/
+logs/
+/target/
+/test-output/

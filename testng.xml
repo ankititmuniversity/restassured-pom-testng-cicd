@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="RestAssured Framework Suite" parallel="methods" thread-count="3" verbose="1">
+
+    <listeners>
+        <listener class-name="com.company.api.listeners.TestListener"/>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="API Tests">
+        <classes>
+            <class name="com.company.api.tests.UsersTests"/>
+            <class name="com.company.api.tests.AuthTests"/>
+            <class name="com.company.api.tests.CRUDTests"/>
+            <class name="com.company.api.tests.DataDrivenTests"/>
+        </classes>
+    </test>
+</suite>
