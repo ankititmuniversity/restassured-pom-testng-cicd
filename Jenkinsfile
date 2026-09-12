@@ -31,9 +31,6 @@ pipeline {
         stage('Extent Report') {
             steps {
                 publishHTML([
-                    allowMissing: true,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true,
                     reportDir: 'custom_reports/ExtentReport',
                     reportFiles: 'ExtentReport.html',
                     reportName: 'Extent Report'
@@ -63,4 +60,5 @@ pipeline {
             echo "Pipeline Failed! Check the reports."
         }
     }
+
 }
